@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'dep '}) %>
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main>
+        <section class="hero">
+            <h2>Your Vietnamese neighbor</h2>
+            <a href="/companies" class="btn">Checkout our partners!</a>
+        </section>
+
+        <section class="about">
+            <h2>About Us</h2>
+            <p>blah blah blah 
+            </p>
+            <a href="/about" class="btn">Learn More</a>
+        </section>
+
+        <section class="featured-companies">
+            <h2>Featured Companies</h2>
+            <ul class="companies-grid">
+                <% for (let company of companies) { %>
+                <li>
+                    <figure>
+                        <img src="<%= company.photo %>" alt="company">
+                    </figure>
+                    <figcaption>
+                        <div class="featured-info">
+                            <h3><%= company.name %></h3>
+                            <p>Rating: <%= company.rating %> yr(s)</p>
+                        </div>
+                        <a href="/companies/<%= company._id %>" class="btn">Learn More</a>
+                    </figcaption>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

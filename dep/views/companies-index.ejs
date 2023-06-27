@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'dep'}) %>
+    <link rel="stylesheet" href="/styles/companies-index.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <section class="hero">
+        <h2>dep Partners</h2>
+        <h3>Explore the beauty of the S shaped country...</h3>
+    </section>
+
+    <main>
+        <section class="listings">
+            <ul>
+                <% for (let company of companies) { %>
+                <li>
+                    <figure>
+                        <img src="<%= company.photo %>">
+                        <figcaption>
+                            <h4><%= company.name %></h4>
+                            <p><%= company.breed %>, <%= company.age %> year(s) old, <%= company.state %></p>
+                            <a href="/pets/<%= company._id %>">Learn More</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

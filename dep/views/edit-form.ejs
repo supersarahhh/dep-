@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: `Edit ${company.name} | dep`}) %>
+    <link rel="stylesheet" href="/styles/edit-form.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <section class="hero">
+        <h2>Edit Company Details:</h2>
+        <h4><i>Explore the S shaped country...</i></h4>
+    </section>
+
+    <form method="POST" action="/companies/<%= company._id %>?_method=PUT">
+  
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= company.name %>" required>
+        <br>
+      
+        <label for="about">About:</label>
+        <input type="text" id="about" name="about" min="0" value="<%= company.about %>" required>
+        <br>
+   
+        <label for="rating">Rating:</label>
+        <input type="text" id="rating" name="rating" value="<%= company.rating %>">
+        <br>
+    
+        <label for="location">HQ:</label>
+        <select id="location" name="location" required>
+        
+        </select>
+       
+        <br>
+        <!-- Photo input -->
+        <label for="photo">Photo (URL):</label>
+        <input type="text" id="photo" name="photo" value="<%= company.photo %>" required>
+        <br>
+        <!-- Description input -->
+        <label for="about">About:</label>
+        <textarea id="description" name="about" required><%= company.about %></textarea>
+        <br>
+        <input type="submit" value="Edit Pet">
+    </form>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
