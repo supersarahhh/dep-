@@ -54,6 +54,16 @@ const companies = [
         photo: "https://images.squarespace-cdn.com/content/v1/611ef30c67e7c934d2569d2c/1630032154719-8PVM0QDV6AT39YDNY53O/S%C3%B4ng+C%C3%A1i+Vi%E1%BB%87t+Nam+Floral+Gin+-+With+botanicals+-+Vertical.jpg?format=1000w",
         isFeatured: true,
     },
+    {
+        name: "Mẹ's Way",
+        founders: "Chau Tonnu",
+        about: "Immigrating with her family to the US at seventeen, Chau Tonnu founded Me’s Way as an ode to her childhood in Vietnam — one filled with memories of iconic street food dishes. Their chili sauce is made by hand, following curated generational recipes to give folks a nostalgic taste of home. To be paired with anything from Bun Bo Hue, to white rice, dumplings and more, this special sauce will certainly elevate any dish!",
+        rating: "5",
+        location: "Normandy Park, WA",
+        photo: "https://img.vietcetera.com/uploads/images/26-oct-2021/219402393-368396111673160-3308796787484570296-n.jpg",
+        isFeatured: true,
+    },
+
 ]
 
 module.exports = companies
