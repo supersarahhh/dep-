@@ -4,36 +4,37 @@
 <head>
     <%- include('./partials/head.ejs', {title: 'dep '}) %>
     <link rel="stylesheet" href="/styles/home.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1;500&display=swap');
+        </style>
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
 
     <main>
-        <section class="hero">
-            <h2>Your Vietnamese neighbor</h2>
-            <a href="/companies" class="btn">Checkout our partners!</a>
-        </section>
+        <section class="hero" >
+            <h1>đẹp</h1>
+            <h3>:(adj) used to describe beautiful people and things in Vietnamese.</h3>
+            <a href="/about" class="btn">About Us</a>        </section>
 
         <section class="about">
-            <h2>About Us</h2>
-            <p>blah blah blah 
-            </p>
-            <a href="/about" class="btn">Learn More</a>
+       
         </section>
 
         <section class="featured-companies">
-            <h2>Featured Companies</h2>
-            <ul class="companies-grid">
+            <h2>đẹp's favorites:</h2>
+            <ul class="company-grid">
                 <% for (let company of companies) { %>
                 <li>
-                    <figure>
-                        <img src="<%= company.photo %>" alt="company">
+                    <figure >
+                        <img src="<%= company.photo %>" alt="company" id="image">
                     </figure>
                     <figcaption>
                         <div class="featured-info">
                             <h3><%= company.name %></h3>
-                            <p>Rating: <%= company.rating %> yr(s)</p>
+                            <p>đẹp's Rating: <%= company.rating %> </p>
                         </div>
                         <a href="/companies/<%= company._id %>" class="btn">Learn More</a>
                     </figcaption>

@@ -10,6 +10,6 @@ db.on('connected', function () {
 });
 
 module.exports = {
-    Companies: require('./company'),
-    seedProducts: require('./seed')
+    Company: require('./companies'),
+    seedCompanies: require('./seed')
 }

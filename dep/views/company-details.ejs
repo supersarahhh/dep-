@@ -3,7 +3,7 @@
 
 <head>
     <%- include('./partials/head.ejs', {title: `${company.name} | dep `}) %>
-    <link rel="stylesheet" href="/styles/company-details.css">
+    <link rel="stylesheet" href="/styles/home.css">
 </head>
 
 <body>
@@ -22,14 +22,38 @@
         </section>
 
         <section class="actions">
-            <button class="btn"><a href="/companies/<%= company._id %>/edit">Edit</a></button>
+
+            <button ><a class="btn" href="/companies/<%= company._id %>/edit">Edit</a></button>
+
             <form method="POST" action="/companies/<%= company._id %>?_method=DELETE">
                 <input class="btn" type="submit" value="Delete" />
             </form>
-            <button class="btn"><a href="/reviews/new/<%= company._id %>">Adopt</a></button>
-        </section>
 
+            <button ><a class="btn" href="/reviews/new/<%= company._id %>">Review</a></button> 
+
+            
+        </section>
+        
     </div>
+    
+    <br>
+    <section>
+        <ul>
+          <% company.reviews.forEach(review => { %>
+            <li>
+              <strong>Username:</strong> <%= review.revName %><br>
+              <strong>Rating:</strong> <%= review.revRating %><br>
+              <strong>Review:</strong> <%= review.revDescription %><br>
+              <strong>Date:</strong> <%= review.revDate %><br>
+              <strong>ID:</strong> <%= review._id %>
+              <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>
+            </li>
+          <% }); %>
+        </ul>
+      </section>
+
 
     <%- include('./partials/footer.ejs') %>
 </body>

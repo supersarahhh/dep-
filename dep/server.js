@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 app.get('/', function (req, res) {
-    db.companies.find({ isFeatured: true })
+    db.Company.find({ isFeatured: true })
         .then(companies => {
             res.render('home', {
                 companies: companies
@@ -38,18 +38,23 @@ app.get('/', function (req, res) {
         })
 });
 
+
 app.get('/seed', function (req, res) {
 
-    db.companies.deleteMany({})
+    db.Company.deleteMany({})
         .then(removedCompanies => {
-            console.log(`Removed ${removedCompanies.deletedCount} products`)
+            console.log(`Removed ${removedCompanies.deletedCount} companies`)
 
-            db.companies.insertMany(db.seedCompanies)
+            db.Company.insertMany(db.seedCompanies)
             .then(addedCompanies => {
                 console.log(`Added ${addedCompanies.length} new companies`)
                 res.json(addedCompanies)
             })
     })
+});
+
+app.get('/about', function (req, res) {
+    res.render('about')
 });
 
 

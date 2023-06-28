@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs', {title: 'My Reviews | Express Store'}) %>
+    <link rel="stylesheet" href="/styles/rev-details.css">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <section class="Review">
+        <h1>Name: <%= rev.revName %></h1>
+        <table>
+            <tr>
+                <th>
+                    <h2>Rating:</h2>
+                </th>
+                <td>
+                    <h2><%= rev.revRating %></h2>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>Review:</h2>
+                </th>
+                <td>
+                    <h2><%= rev.revDescription %></h2>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>Date submitted:</h2>
+                </th>
+                <td>
+                    <h2><%= rev.revDate.toLocaleDateString() %></h2>
+                </td>
+            </tr>
+        </table>
+
+        <form method="POST" action="/reviews/<%= app._id %>?_method=DELETE">
+            <input class="btn" type="submit" value="Delete" />
+        </form>
+    </section>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

@@ -3,7 +3,7 @@ const router = express.Router()
 const db = require('../models')
 
 router.get('/', (req, res) => {
-    db.companies.find({}, { reviews: true, _id: false })
+    db.Company.find({}, { reviews: true, _id: false })
         .then(companies => {
            
             const flatList = []
@@ -14,10 +14,10 @@ router.get('/', (req, res) => {
 
 
 router.get('/new/:companyId', (req, res) => {
-    db.companies.findById(req.params.companyId)
+    db.Company.findById(req.params.companyId)
         .then(company => {
             if (company) {
-                res.render('reviews/new-form.ejs', { company: company })
+                res.render('reviews/rev-form.ejs', { company: company })
             } else {
                 res.send('404 Error: Page Not Found')
             }
@@ -25,16 +25,18 @@ router.get('/new/:companyId', (req, res) => {
 })
 
 router.post('/create/:companyId', (req, res) => {
-    db.companies.findByIdAndUpdate(
-        req.params.revId,
+    db.Company.findByIdAndUpdate(
+        req.params.companyId,
         { $push: { reviews: req.body } },
         { new: true }
     )
-        .then(() => res.redirect('/companies/' + req.params.revId))
+        .then((result) => {
+            console.log(result)
+            res.redirect('/companies/' + req.params.companyId)})
 });
 
 router.get('/:id', (req, res) => {
-    db.companies.findOne(
+    db.Company.findOne(
         { 'rev._id': req.params.id },
         { 'rev.$': true, _id: false }
     )
@@ -45,12 +47,12 @@ router.get('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-    db.companies.findOneAndUpdate(
+    db.Company.findOneAndUpdate(
         { 'reviews._id': req.params.id },
         { $pull: { reviews: { _id: req.params.id } } },
         { new: true }
     )
-        .then(company => res.json(company))
+    .then(company => res.redirect('/companies/' + company._id))
 });
 
 

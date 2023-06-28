@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs', {title: 'Leave a dep Observation:'}) %>
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <section class="hero">
+        <h2>Observation:</h2>
+        <h4><i>Ok fine, it's review. You're leaving a review: <a href="/companies/<%= company._id %>"><%= company.name %></a></i></h4>
+    </section>
+
+    <form action="/reviews/create/<%= company._id %>" method="POST">
+        <label for="revName">Username:</label><br>
+        <input type="text" id="revName" name="revName" required><br>
+
+        <label for="revRating">Rating:</label><br>
+        <input type="number" id="revRating" name="revRating" required><br>
+
+        <label for="revDescription">Review:</label><br>
+        <input type="text" id="revDescription" name="revDescription" required><br>
+
+        <label for="revDate">Date:</label><br>
+        <input type="date" id="revDate" name="revDate" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

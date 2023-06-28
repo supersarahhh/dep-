@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs', {title: 'My Reviews | dep Observations'}) %>
+    <link rel="stylesheet" href="/styles/companies-index.css">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <main>
+        <section class="listings">
+            <ul>
+                <% for (let review of reviews) { %>
+                <li>
+                    <h4><%= review.revName %> - <%= review.revRating%></h4>
+                    <p>Created: <%= review.revDate.toDateString() %></p>
+                    <a href="/reviews/<%= review._id %>">Read More</a>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

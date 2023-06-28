@@ -3,7 +3,7 @@
 
 <head>
     <%- include('./partials/head.ejs', {title: `Edit ${company.name} | dep`}) %>
-    <link rel="stylesheet" href="/styles/edit-form.css">
+    <link rel="stylesheet" href="/styles/home.css">
 </head>
 
 <body>
@@ -25,24 +25,18 @@
         <br>
    
         <label for="rating">Rating:</label>
-        <input type="text" id="rating" name="rating" value="<%= company.rating %>">
+        <input type="number" id="rating" name="rating" value="<%= company.rating %>" required>
         <br>
     
         <label for="location">HQ:</label>
-        <select id="location" name="location" required>
-        
-        </select>
-       
+        <input type="text" id="location" name="location" value="<%= company.location %>" required>
         <br>
-        <!-- Photo input -->
+       
         <label for="photo">Photo (URL):</label>
         <input type="text" id="photo" name="photo" value="<%= company.photo %>" required>
         <br>
-        <!-- Description input -->
-        <label for="about">About:</label>
-        <textarea id="description" name="about" required><%= company.about %></textarea>
-        <br>
-        <input type="submit" value="Edit Pet">
+
+        <input type="submit" value="Update Company">
     </form>
 
     <%- include('./partials/footer.ejs') %>

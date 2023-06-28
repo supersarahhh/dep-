@@ -3,28 +3,33 @@
 
 <head>
     <%- include('./partials/head.ejs', {title: 'dep'}) %>
-    <link rel="stylesheet" href="/styles/companies-index.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1;500&display=swap');
+        </style>
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
 
     <section class="hero">
-        <h2>dep Partners</h2>
-        <h3>Explore the beauty of the S shaped country...</h3>
+        <h2>đẹp...</h2>
+        <h4>:(adj) used to describe beautiful people and things in Vietnamese</h4>
     </section>
 
     <main>
-        <section class="listings">
+        <section class="company-grid">
             <ul>
                 <% for (let company of companies) { %>
                 <li>
                     <figure>
-                        <img src="<%= company.photo %>">
+                        <img src="<%= company.photo %>" id="image">
                         <figcaption>
                             <h4><%= company.name %></h4>
-                            <p><%= company.breed %>, <%= company.age %> year(s) old, <%= company.state %></p>
-                            <a href="/pets/<%= company._id %>">Learn More</a>
+                            <p><%= company.about %></p>
+                            <p> đẹp's Rating: <%= company.rating %><p>
+                            <p>HQ: <%= company.location %><p>
+                            <a href="/companies/<%= company._id %>">Learn More</a>
                         </figcaption>
                     </figure>
                 </li>
