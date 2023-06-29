@@ -3,7 +3,7 @@
 
 <head>
     <%- include('./partials/head.ejs', {title: `Edit ${company.name} | dep`}) %>
-    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/new-company.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <h4><i>Explore the S shaped country...</i></h4>
     </section>
 
-    <form method="POST" action="/companies/<%= company._id %>?_method=PUT">
+    <form class="form" method="POST" action="/companies/<%= company._id %>?_method=PUT">
   
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" value="<%= company.name %>" required>

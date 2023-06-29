@@ -19,10 +19,7 @@ label {
 
 input[type="text"],
 input[type="number"],
-input[type="email"],
-input[type="tel"],
-textarea,
-select {
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -49,4 +46,10 @@ input[type="submit"]:hover {
     background-color: #fff;
     color: #333;
     border: 1px solid #333;
+}
+
+.form {
+    margin: 50px 200px;
+    margin-bottom: 100px;
+
 }

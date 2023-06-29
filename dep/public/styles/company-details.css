@@ -19,7 +19,7 @@ body {
 }
 
 a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -49,7 +49,6 @@ h2{
     align-self: center;
     text-align: center;
     font-size: xx-large;
-    color: dar;
 }
 
 nav ul {
@@ -63,19 +62,7 @@ nav li:not(:last-child) {
 
 nav a {
     font-size: 1rem;
-}
-
-/* Hero section styles */
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 80vh;
-    background-image: url("/img/lanterns\.jpeg");   
-    background-size: cover;
-    margin-bottom: 50px;
+    color: #333;
 }
 
 .hero h2 {
@@ -94,25 +81,30 @@ nav a {
     text-align: center;
 }
 
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px;
+    border-color: white;
+}
+
 .btn {
-    /* display: inline-block; */
-    padding: 1rem;
     font-size: 1rem;
-    background-color: rgba(69, 71, 72, 0.3);;
+    text-align: center;
+    background-color: transparent;
     color: #fff;
-    border: none;
+    border: 1px;
+    border-color: white;
     border-radius: 5px;
     cursor: pointer;
-    height: 40px;
-    text-align: center;
-    margin: 2px 50px;
-
-    /* margin: 15px; */
-
+    height: 15px;
+    width: fit-content;
+    margin: 5px;
 }
 
 .btn:hover {
-    background-color: #555;
+    background-color: rgba(100, 205, 251, 0.3);
 }
 
 /* Footer styles */
@@ -121,6 +113,7 @@ footer {
     padding: 1rem;
     background-color: transparent;
     width: calc(100vw - 1rem);
+
 }
 
 footer * {
@@ -129,6 +122,13 @@ footer * {
 
 footer ul {
     justify-content: center;
+    color: #fff;
+
+}
+
+footer a {
+    color: #fff;
+
 }
 
 footer h2 {
@@ -136,41 +136,39 @@ footer h2 {
 }
 
 #image {
+    display: flex;
+    justify-content: center;
     height: 300px;
     width: 350px;
-    align-items: center;
-    border-radius: 10px;
-    margin: 10px;
-    
+    border-radius: 30px;
+    margin: auto;
+    padding: 20px;
+
+  
 }
 
-.company-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-    margin-top: 2rem;
-    padding: 1rem;
-}
-
-figure {
-    color: black;
-    align-items: center;
-    
-}
-
-figcaption {
+.img-container {
+    text-shadow: black;
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
+    justify-content: space-around;
+    align-self: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(69, 71, 72, 0.3);
+    border-radius: 10px;
+    max-width: 100vw;
+    margin: 20px 100px;
+    padding: 20px 0px;
 }
 
 .content {
-    text-align: center;
-    backdrop-filter: blur(10px);
-    background-color: rgba(69, 71, 72, 0.3);
     margin: 10px;
-    padding: 15px;
-
 }
+
+section {
+    margin: 0px 500px;
+}
+
+
+
 
