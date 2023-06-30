@@ -12,13 +12,13 @@ const revsCtrl = require('./controllers/reviews')
 
 const app = express();
 
-const liveReloadServer = livereload.createServer();
-liveReloadServer.server.once("connection", () => {
+// const liveReloadServer = livereload.createServer();
+// liveReloadServer.server.once("connection", () => {
   
-    setTimeout(() => {
-        liveReloadServer.refresh("/");
-    }, 100);
-});
+//     setTimeout(() => {
+//         liveReloadServer.refresh("/");
+//     }, 100);
+// });
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
