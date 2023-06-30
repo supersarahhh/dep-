@@ -170,5 +170,16 @@ section {
 }
 
 
+.reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-size: medium;
+    width: 300px;
+    margin-bottom: 100px;
+    
+}    
+
 
 

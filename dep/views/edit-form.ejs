@@ -4,6 +4,10 @@
 <head>
     <%- include('./partials/head.ejs', {title: `Edit ${company.name} | dep`}) %>
     <link rel="stylesheet" href="/styles/new-company.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1;500&display=swap');
+        </style>
 </head>
 
 <body>
@@ -36,7 +40,7 @@
         <input type="text" id="photo" name="photo" value="<%= company.photo %>" required>
         <br>
 
-        <input type="submit" value="Update Company">
+        <input class="submit" type="submit" value="Update">
     </form>
 
     <%- include('./partials/footer.ejs') %>

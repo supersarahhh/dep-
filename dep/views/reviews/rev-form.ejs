@@ -5,6 +5,9 @@
     <%- include('../partials/head.ejs', {title: 'Leave a dep Observation:'}) %>
     <link rel="stylesheet" href="/styles/rev-form.css">
     <link rel="stylesheet" href="/styles/home.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1;500&display=swap');
+        </style>
 
 </head>
 
@@ -13,7 +16,7 @@
 
     <section class="hero">
         <h2>Observation:</h2>
-        <h4><i>Ok fine, it's review. You're leaving a review: <a href="/companies/<%= company._id %>"><%= company.name %></a></i></h4>
+        <h4><i>Ok fine, it's review. You're leaving a review for: <br><a href="/companies/<%= company._id %>"><%= company.name %></a></i></h4>
     </section>
 
     <form action="/reviews/create/<%= company._id %>" method="POST">
@@ -29,7 +32,7 @@
         <label for="revDate">Date:</label><br>
         <input type="date" id="revDate" name="revDate" required><br>
 
-        <input type="submit" value="Submit">
+        <br><input type="submit" value="Submit">
     </form>
 
     <%- include('../partials/footer.ejs') %>

@@ -29,26 +29,25 @@
       
           </section>
       
-      </div></div></div>
+      </div></div></div></div>
       
       <br>
-      <section>
-          <ul>
+      <section class="reviews">
+       
             <% company.reviews.forEach(review => { %>
-              <li>
+              
                 <strong>Username:</strong> <%= review.revName %><br>
-                <strong>Rating:</strong> <%= review.revRating %><br>
-                <strong>Review:</strong> <%= review.revDescription %><br>
-                <strong>Date:</strong> <%= review.revDate %><br>
-                <strong>ID:</strong> <%= review._id %>
-                <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
+                <br><strong>Rating:</strong> <%= review.revRating %><br>
+                <br><strong>Review:</strong> <%= review.revDescription %><br>
+                <br><strong>Date:</strong> <%= review.revDate %><br>
+                <br><form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
                   <input class="btn" type="submit" value="Delete" />
               </form>
-              </li>
+           
             <% }); %>
-          </ul>
+       
         </section>
-    </div>
+    
 
 
     <%- include('./partials/footer.ejs') %>

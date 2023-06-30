@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+    background-color: rgba(255, 166, 0, 0.472);
+    background-image: url("/img/vietnams-bays\.jpeg"); 
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+   
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h1 a:hover {
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+h2{
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    font-size: xx-large;
+    color: dar;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li:not(:last-child) {
+    margin-right: 1rem;
+}
+
+nav a {
+    font-size: 1rem;
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    background-image: url("/img/lanterns\.jpeg");   
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.hero h3 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hero h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.btn {
+    /* display: inline-block; */
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: rgba(69, 71, 72, 0.3);;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+    margin: 2px 50px;
+
+    /* margin: 15px; */
+
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: transparent;
+    width: calc(100vw - 1rem);
+}
+
+footer * {
+    color: #fff;
+}
+
+footer ul {
+    justify-content: center;
+}
+
+footer h2 {
+    font-size: x-large;
+}
+
+#image {
+    height: 300px;
+    width: 350px;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px;
+    
+}
+
+.company-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+figure {
+    color: black;
+    align-items: center;
+    
+}
+
+figcaption {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.content {
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(69, 71, 72, 0.3);
+    margin: 20px 50px 100px 50px;
+    padding: 50px;
+
+}

@@ -4,6 +4,12 @@
     margin-bottom: 2rem;
 }
 
+h4 a {
+    color: white;
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
 
 form {
     width: 60%;
@@ -19,6 +25,7 @@ label {
 
 input[type="text"],
 input[type="number"],
+
 textarea {
     width: 100%;
     padding: 10px;
@@ -53,3 +60,4 @@ input[type="submit"]:hover {
     margin-bottom: 100px;
 
 }
+
