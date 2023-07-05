@@ -34,9 +34,10 @@
                     <figcaption>
                         <div class="featured-info">
                             <h3><%= company.name %></h3>
-                            <p>đẹp's Rating: <%= company.rating %> </p>
+                            <p>đẹp's Rating: <%= company.rating %> </p> 
+                            <a class="lrn" href="/companies/<%= company._id %>">Learn More</a>
                         </div>
-                        <a href="/companies/<%= company._id %>" class="btn">Learn More</a>
+                       
                     </figcaption>
                 </li>
                 <% } %>

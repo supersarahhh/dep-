@@ -20,6 +20,7 @@ body {
 a {
     color: black;
     text-decoration: none;
+    text-align: center;
 }
 
 a:hover {
@@ -88,13 +89,19 @@ nav a {
 
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 1rem;
     font-size: 1.2rem;
     background-color: #333;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+}
+
+a.btn {
+    text-align: center;
+    padding: 5px;
 }
 
 .btn:hover {
